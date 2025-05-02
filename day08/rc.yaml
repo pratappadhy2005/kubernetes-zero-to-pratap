@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: nginx-rc
+  labels:
+    env: demo
+spec:
+  template:
+    metadata:
+      labels:
+        run: nginx-pod
+        env: demo
+      name: nginx-pod-new
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-pod-new
+  replicas: 4
+  selector:
+    matchLabels:
+      env: demo
