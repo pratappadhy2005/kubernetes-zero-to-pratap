@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-01-15T10:52:07Z"
+  labels:
+    run: nginx
+    tier: backend
+    type: app1
+  name: redis
+  namespace: default
+  resourceVersion: "188445"
+  uid: f6aa266c-622d-4b5f-9190-5947a8370929
+spec:
+  containers:
+  - image: redis
+    imagePullPolicy: Always
+    name: redis
